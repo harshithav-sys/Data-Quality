@@ -1,0 +1,5 @@
+[
+  {"name": "Biscuits", "sugar": 120, "salt": 1},
+  {"name": "", "sugar": 50, "salt": -1},
+  {"name": "Test Product", "sugar": 100, "salt": 1}
+]
