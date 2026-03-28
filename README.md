@@ -29,6 +29,7 @@ Instead of blindly converting legacy code:
 This system ensures functional equivalence between old and new implementations.
 ---------------------------------------------------------------------------------
 Pipeline
+## Validation Pipeline
 
 Input Data
    ↓
@@ -42,6 +43,7 @@ Validation Result (PASS / FAIL)
 
 -------------------------------------------------------------------------------
 Project Structure
+## Project Structure
 
 Data-Quality/
 │
