@@ -21,12 +21,22 @@ def validate_product(product):
         python_check_salt(product["salt"])
     )
 
-    return results
+   
+    all_pass = all(r["match"] for r in results.values())
+
+    return {
+        "product": product,
+        "results": results,
+        "overall_status": "PASS" if all_pass else "FAIL"
+    }
 
 
 def compare(perl_result, python_result):
+    match = perl_result == python_result
+
     return {
-        "perl": perl_result,
-        "python": python_result,
-        "status": "PASS" if perl_result == python_result else "FAIL"
+        "perl_output": perl_result,
+        "python_output": python_result,
+        "match": match,
+        "status": "PASS" if match else "FAIL"
     }
